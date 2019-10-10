@@ -4,10 +4,12 @@ namespace netCore_v2
 {
     class Program
     {
+        private String name;
         static void Main()
         {
             var data = new Program();
             var retornar = data.retornaIntToString();
+            
             
             data.metodoPrivado();
             data.metodoPublico();
