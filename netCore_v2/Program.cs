@@ -4,14 +4,14 @@ namespace netCore_v2
 {
     class Program
     {
-        private string cadena;
+        private string cadena; 
         private string verMayusculas = "";
         private string verMinusculas = "";
-        private int n;
-        private string[] Mayusculas;
-        private string[] Minusculas;
-        private string[] tempMy;
-        private string[] tempMn;
+        private int n; 
+        private string[] Mayusculas; 
+        private string[] Minusculas; 
+        private string[] tempMy; 
+        private string[] tempMn; 
 
         public Program(string cadena)
         {
@@ -59,7 +59,7 @@ namespace netCore_v2
 
             for (int i = 0; i < tempMn.Length; i++)
             {
-                if (tempMy[i] != null)
+                if (tempMn[i] != null)
                 {
                     Minusculas[i] = tempMn[i];
                     //verMayusculas = verMayusculas + "," + verMayusculas[i];
@@ -73,6 +73,7 @@ namespace netCore_v2
         {
             var cadena = Console.ReadLine();
             var data = new Program(cadena);
+            Console.WriteLine("Las letras mayusculas son: " + data.mayusculas() + "\n\n" + "Las letras minusculas son: " + data.minusculas());
 
             Console.ReadLine();
         }
