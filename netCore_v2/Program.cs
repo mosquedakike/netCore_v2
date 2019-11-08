@@ -8,6 +8,9 @@ namespace netCore_v2
         {
             Object[] parametros = {"kike", 25, 10, "Gran desarrollador", true, 25.2 };
             new Program().metodo(parametros);
+
+            Object[] objeto_parametros = { };
+            new Program().metodo_parametros("parametros nuevos",2);
             Console.ReadLine();    
         }
 
@@ -18,6 +21,14 @@ namespace netCore_v2
             int edad = (int)parametros[1];
             String puesto = (string)parametros[3];
             Console.WriteLine(nombre + " " + edad + " " + puesto);
+        }
+
+        //La palabra [params] sirve para tomar los parametros del objeto que esta llamando al metodo como en la linea 13
+        private void metodo_parametros(params object[] objeto_parametros)
+        {
+            String mensaje = (string)objeto_parametros[0];
+            int numero = (int)objeto_parametros[1];
+            Console.WriteLine(mensaje + "\n" + numero);
         }
     }
 }
