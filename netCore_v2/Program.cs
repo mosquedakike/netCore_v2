@@ -11,7 +11,10 @@ namespace netCore_v2
 
             Object[] objeto_parametros = { };
             new Program().metodo_parametros("parametros nuevos",2);
-            Console.ReadLine();    
+           
+
+            int number = 30;
+            new Program().metodo_parametros(number);
         }
 
         //SI NECESITAMOS PASAR VARIOS PARAMETROS A UN METODO, TENEMOS LA OPCION DE HACERLO CON UN ARRAYS
@@ -29,6 +32,13 @@ namespace netCore_v2
             String mensaje = (string)objeto_parametros[0];
             int numero = (int)objeto_parametros[1];
             Console.WriteLine(mensaje + "\n" + numero);
+        }
+
+        //Con la palabra [in] agregas restricciones al valor de una variable para que no pueda ser modificada
+        private void metodo_parametros(in int valor)
+        {
+            //valor = 40;
+            Console.WriteLine(valor);
         }
     }
 }
